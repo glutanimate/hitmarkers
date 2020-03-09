@@ -38,12 +38,12 @@ from aqt.utils import showWarning
 
 from .libaddon.platform import pathUserFiles, PATH_THIS_ADDON
 from .feedback import confirm
-from .config import config
 from .consts import ADDON
 
 from typing import Optional, NamedTuple, Callable
 
-_DEFAULT_IMAGE_SET = "hitmarkers"
+# TODO?: configurable
+_DEFAULT_MEDIA_SET = "hitmarkers"
 _DEFAULT_DURATION = 200
 
 
@@ -69,9 +69,9 @@ def _get_media_paths(set_name: str, media_type: str) -> Optional[MediaPaths]:
 
 
 def on_answer_card(reviewer: Reviewer, card: Card, ease: int):
-    image_set = _DEFAULT_IMAGE_SET  # TODO?: configurable
-    audio_set = config["local"]["audioSet"]
-    duration = _DEFAULT_DURATION  # TODO?: configurable
+    image_set = _DEFAULT_MEDIA_SET
+    audio_set = _DEFAULT_MEDIA_SET
+    duration = _DEFAULT_DURATION
 
     image_paths = _get_media_paths(image_set, "images")
     sound_paths = _get_media_paths(audio_set, "sounds")
