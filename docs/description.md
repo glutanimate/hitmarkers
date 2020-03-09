@@ -1,6 +1,6 @@
 <!-- BANNER -->
 
-Gamifies your reviews with an FPS-game inspired hitmarker image and sound effect.
+Gamifies your reviews with an FPS-game inspired hitmarker effect (visual and audio).
 
 ![](https://raw.githubusercontent.com/glutanimate/hitmarkers/master/screenshots/screencast.gif)
 
