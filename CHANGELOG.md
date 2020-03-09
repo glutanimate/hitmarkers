@@ -12,6 +12,10 @@ If you enjoy Hitmarkers, please consider supporting my work on Patreon, or by bu
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed a playback error on Windows that would appear on Anki v2.1.20 and up (thanks to Hugo, Bruce, and Raghav on Patreon for the reports!)
+
 ## [0.1.0] - 2020-03-09
 
 ### [Download](https://github.com/glutanimate/hitmarkers/releases/tag/v0.1.0)
