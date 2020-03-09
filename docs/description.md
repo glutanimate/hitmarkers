@@ -1,10 +1,9 @@
 <!-- BANNER -->
 
-Gamifies your reviews with an FPS-game inspired hitmarker effect (visual and audio).
+Gamifies your reviews with an FPS-game inspired hitmarker effect (visual and sound). Pairs perfectly with jac241's [Anki Killstreaks](https://ankiweb.net/shared/info/579111794)!
 
 ![](https://raw.githubusercontent.com/glutanimate/hitmarkers/master/screenshots/screencast.gif)
 
-Hitmarkers makes a great companion piece to jac241's [Anki Killstreaks](https://ankiweb.net/shared/info/579111794). Make sure to check it out!
 
 <!-- CHANGELOG -->
 
