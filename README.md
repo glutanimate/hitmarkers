@@ -1,4 +1,4 @@
-<p align="center"><img src="screenshots/logo.png"></p>
+<p align="center"><img src="screenshots/screencast"></p>
 
 <h2 align="center">Hitmarkers for Anki</h2>
 
@@ -12,9 +12,9 @@
 <a title="Follow me on Twitter" href="https://twitter.com/intent/user?screen_name=glutanimate"><img src="https://img.shields.io/twitter/follow/glutanimate.svg"></a>
 </p>
 
-> Intro quip
+> Bringing the satisfaction of FPS games into Anki
 
-This is an add-on for the spaced-repetition flashcard app [Anki](https://apps.ankiweb.net/).
+This is an add-on for the spaced-repetition flashcard app [Anki](https://apps.ankiweb.net/) that rewards succesful reviews with a satisfying hit marker effect.
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -83,7 +83,9 @@ Contributions are welcome! Please review the [contribution guidelines](./CONTRIB
 
 ### License and Credits
 
-*Hitmarkers* is *Copyright © 2017-2020 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+*Hitmarkers* is *Copyright © 2020 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+
+This add-on is based on [Visual Feedback for Reviews](https://ankiweb.net/shared/info/1749604199) which is Copyright © 2017 Ja-Dark and Copyright © 2017-2020 Aristotelis P. (Glutanimate).
 
 Hitmarkers is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license, extended by a number of additional terms. For more information please see the [LICENSE](https://github.com/glutanimate/hitmarkers/blob/master/LICENSE) file that accompanied this program.
 
