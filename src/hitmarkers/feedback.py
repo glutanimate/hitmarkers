@@ -97,11 +97,10 @@ def confirm(image_path: str, audio_path: str, period: int):
 
     if Path(audio_path).is_file():
         if av_player:
-            # Ugly hack to bypass reviewer stopping playback
-            player = av_player._best_player_for_tag(
-                SoundOrVideoTag(filename=audio_path)
+            # Delay audio playback to prevent reviewer from stopping playback
+            # on showQuestion
+            mw.progress.timer(
+                1, lambda: av_player.play_file(filename=audio_path), False
             )
-            player.stop()
-            player.play(SoundOrVideoTag(filename=audio_path), lambda: None)
         else:
             legacy_play(audio_path)
