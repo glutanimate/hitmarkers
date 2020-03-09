@@ -16,6 +16,8 @@
 
 This is an add-on for the spaced-repetition flashcard app [Anki](https://apps.ankiweb.net/) that rewards succesful reviews with a satisfying hit marker effect.
 
+For more FPS gamification goodness, make sure to also check out @jac241's [Anki Killstreaks](https://github.com/jac241/anki_killstreaks).
+
 ### Table of Contents <!-- omit in toc -->
 
 <!-- MarkdownTOC levels="1,2,3" -->
