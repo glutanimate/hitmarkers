@@ -97,10 +97,11 @@ def confirm(image_path: str, audio_path: str, period: int):
 
     if Path(audio_path).is_file():
         if av_player:
-            av_player.maybe_interrupt()
+            # Ugly hack to bypass reviewer stopping playback
             player = av_player._best_player_for_tag(
                 SoundOrVideoTag(filename=audio_path)
             )
+            player.stop()
             player.command("loadfile", audio_path, "append-play")  # type: ignore
         else:
             legacy_play(audio_path)
