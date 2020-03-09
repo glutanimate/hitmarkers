@@ -102,6 +102,6 @@ def confirm(image_path: str, audio_path: str, period: int):
                 SoundOrVideoTag(filename=audio_path)
             )
             player.stop()
-            player.command("loadfile", audio_path, "append-play")  # type: ignore
+            player.play(SoundOrVideoTag(filename=audio_path), lambda: None)
         else:
             legacy_play(audio_path)
