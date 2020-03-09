@@ -1,0 +1,15 @@
+{
+    "display_name": "Hitmarkers",
+    "module_name": "hitmarkers",
+    "repo_name": "hitmarkers",
+    "ankiweb_id": "",
+    "author": "Glutanimate",
+    "contact": "https://glutanimate.com",
+    "homepage": "https://github.com/glutanimate/hitmarkers",
+    "copyright_start": 2017,
+    "tags": "",
+    "conflicts": [],
+    "targets": [
+        "anki21"
+    ]
+}
