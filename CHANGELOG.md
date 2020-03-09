@@ -12,11 +12,16 @@ If you enjoy Hitmarkers, please consider supporting my work on Patreon, or by bu
 
 ## [Unreleased]
 
+## [0.1.0] - 2020-03-09
+
+### [Download](https://github.com/glutanimate/hitmarkers/releases/tag/v0.1.0)
+
 ### Added
 
 - Initial release of Hitmarkers
 
-[Unreleased]: https://github.com/glutanimate/hitmarkers/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/glutanimate/hitmarkers/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/glutanimate/hitmarkers/compare/v0.0.0...v0.1.0
 
 -----
 
