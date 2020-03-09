@@ -4,7 +4,7 @@ Gamifies your reviews with an FPS-game inspired hitmarker image and sound effect
 
 ![](https://raw.githubusercontent.com/glutanimate/hitmarkers/master/screenshots/screencast.gif)
 
-For more gamification along these lines, make sure to check out jac241's [Anki Killstreaks](https://ankiweb.net/shared/info/579111794). These add-ons make great companion pieces together.
+Hitmarkers makes a great companion piece to jac241's [Anki Killstreaks](https://ankiweb.net/shared/info/579111794). Make sure to check it out!
 
 <!-- CHANGELOG -->
 
