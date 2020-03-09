@@ -1,4 +1,4 @@
-<p align="center"><img src="screenshots/screencast"></p>
+<p align="center"><img src="screenshots/screencast.gif"></p>
 
 <h2 align="center">Hitmarkers for Anki</h2>
 
@@ -12,7 +12,7 @@
 <a title="Follow me on Twitter" href="https://twitter.com/intent/user?screen_name=glutanimate"><img src="https://img.shields.io/twitter/follow/glutanimate.svg"></a>
 </p>
 
-> Bringing the satisfaction of FPS games into Anki
+> Bringing the satisfaction of FPS games to Anki!
 
 This is an add-on for the spaced-repetition flashcard app [Anki](https://apps.ankiweb.net/) that rewards succesful reviews with a satisfying hit marker effect.
 
