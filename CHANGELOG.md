@@ -12,6 +12,10 @@ If you enjoy Hitmarkers, please consider supporting my work on Patreon, or by bu
 
 ## [Unreleased]
 
+### Changed
+
+- Normalized volume for passed and lapsed sounds
+
 ## [0.1.1] - 2020-03-09
 
 ### [Download](https://github.com/glutanimate/hitmarkers/releases/tag/v0.1.1)
