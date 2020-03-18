@@ -38,8 +38,7 @@ For more FPS gamification goodness, make sure to also check out @jac241's [Anki 
 
 #### AnkiWeb <!-- omit in toc -->
 
-This section will be updated once the add-on is available on AnkiWeb.
-<!-- The easiest way to install Hitmarkers is through [AnkiWeb](https://ankiweb.net/shared/info/ANKIWEB_ID). -->
+The easiest way to install Hitmarkers is through [AnkiWeb](https://ankiweb.net/shared/info/1776869150).
 
 #### Manual installation <!-- omit in toc -->
 
