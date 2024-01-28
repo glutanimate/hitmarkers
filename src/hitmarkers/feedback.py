@@ -36,15 +36,12 @@ Visual feedback
 from pathlib import Path
 from typing import Optional
 
-from PyQt5.QtCore import QPoint, Qt, QTimer
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QLabel
-
 from aqt import mw
+from aqt.qt import QLabel, QPixmap, QPoint, Qt, QTimer
 
 try:
-    from aqt.sound import av_player
     from anki.sound import SoundOrVideoTag
+    from aqt.sound import av_player
 
     legacy_play = None
 except (ImportError, ModuleNotFoundError):
@@ -80,15 +77,19 @@ def confirm(image_path: str, audio_path: str, period: int):
     if Path(image_path).is_file():
 
         lab = QLabel(parent=parent)
-        img = QPixmap(image_path).scaledToWidth(64, mode=Qt.SmoothTransformation)
+        img = QPixmap(image_path).scaledToWidth(
+            64, mode=Qt.TransformationMode.SmoothTransformation
+        )
         lab.setPixmap(img)
-        lab.setAttribute(Qt.WA_TranslucentBackground, True)
+        lab.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
         lab.setAutoFillBackground(False)
         lab.setWindowFlags(
-            Qt.ToolTip | Qt.FramelessWindowHint | Qt.NoDropShadowWindowHint  # type: ignore
+            Qt.WindowType.ToolTip
+            | Qt.WindowType.FramelessWindowHint
+            | Qt.WindowType.NoDropShadowWindowHint
         )
         center = parent.frameGeometry().center()
-        qp = QPoint(img.width() * 0.5, img.height() * 0.5)  # type: ignore
+        qp = QPoint(int(round(img.width() * 0.5)), int(round(img.height() * 0.5)))
         lab.move(center - qp)
 
         lab.show()
