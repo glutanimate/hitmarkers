@@ -2,7 +2,7 @@
 
 # Hitmarkers Add-on for Anki
 #
-# Copyright (C) 2017-2020  Aristotelis P. <https://glutanimate.com/>
+# Copyright (C) 2017-2024  Aristotelis P. <https://glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -44,7 +44,7 @@ _lab: Optional[QLabel] = None
 _timer: Optional[QTimer] = None
 
 
-def closeConfirm():
+def close_confirm():
     global _lab, _timer  # noqa: PLW0603
     if _lab:
         try:
@@ -62,7 +62,7 @@ def confirm(image_path: str, audio_path: str, period: int):
     if mw is None:
         return
     parent = mw
-    closeConfirm()
+    close_confirm()
 
     if Path(image_path).is_file():
         lab = QLabel(parent=parent)
@@ -82,7 +82,7 @@ def confirm(image_path: str, audio_path: str, period: int):
         lab.move(center - qp)
 
         lab.show()
-        _timer = mw.progress.timer(period, closeConfirm, False, parent=parent)
+        _timer = mw.progress.timer(period, close_confirm, False, parent=parent)
         _lab = lab
 
     if Path(audio_path).is_file():

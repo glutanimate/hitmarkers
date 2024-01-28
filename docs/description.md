@@ -11,7 +11,7 @@ Gamifies your reviews with an FPS-game inspired hitmarker effect (visual and sou
 
 ### CREDITS AND LICENSE
 
-*Copyright © 2020 [Aristotelis P.](https://glutanimate.com/)  (Glutanimate)*
+*Copyright © 2020-2024 [Aristotelis P.](https://glutanimate.com/)  (Glutanimate)*
 
 This add-on is based on [Visual Feedback for Reviews](https://ankiweb.net/shared/info/1749604199) which is Copyright © 2017 Ja-Dark and Copyright © 2017-2020 Aristotelis P. (Glutanimate).
 

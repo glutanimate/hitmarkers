@@ -7,7 +7,6 @@
 <a title="License: GNU AGPLv3" href="https://github.com/glutanimate/hitmarkers/blob/master/LICENSE"><img  src="https://img.shields.io/badge/license-GNU AGPLv3-green.svg"></a>
 <a title="Rate on AnkiWeb" href="https://ankiweb.net/shared/info/1776869150"><img src="https://glutanimate.com/logos/ankiweb-rate.svg"></a>
 <br>
-<a title="Buy me a coffee :)" href="https://ko-fi.com/X8X0L4YV"><img src="https://img.shields.io/badge/ko--fi-contribute-%23579ebd.svg"></a>
 <a title="Support me on Patreon :D" href="https://www.patreon.com/bePatron?u=7522179"><img src="https://img.shields.io/badge/patreon-support-%23f96854.svg"></a>
 <a title="Follow me on Twitter" href="https://twitter.com/intent/user?screen_name=glutanimate"><img src="https://img.shields.io/twitter/follow/glutanimate.svg"></a>
 </p>
@@ -42,17 +41,14 @@ The easiest way to install Hitmarkers is through [AnkiWeb](https://ankiweb.net/s
 
 #### Manual installation <!-- omit in toc -->
 
-Please click on the entry corresponding to your Anki version:
-
 <details>
 
-<summary><i>Anki 2.1</i></summary>
+<summary><i>Instructions</i></summary>
 
-1. Make sure you have the [latest version](https://apps.ankiweb.net/#download) of Anki 2.1 installed. Earlier releases (e.g. found in various Linux distros) do not support `.ankiaddon` packages.
-2. Download the latest `.ankiaddon` package from the [releases tab](https://github.com/glutanimate/hitmarkers/releases) (you might need to click on *Assets* below the description to reveal the download links)
-3. From Anki's main window, head to *Tools* → *Add-ons*
-4. Drag-and-drop the `.ankiaddon` package onto the add-ons list
-5. Restart Anki
+1. Download the latest `.ankiaddon` package from the [releases tab](https://github.com/glutanimate/hitmarkers/releases) (you might need to click on *Assets* below the description to reveal the download links)
+2. From Anki's main window, head to *Tools* → *Add-ons*
+3. Drag-and-drop the `.ankiaddon` package onto the add-ons list
+4. Restart Anki
 
 Video summary:
 
@@ -84,13 +80,11 @@ Contributions are welcome! Please review the [contribution guidelines](./CONTRIB
 
 ### License and Credits
 
-*Hitmarkers* is *Copyright © 2020 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+*Hitmarkers* is *Copyright © 2020-2024 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
 
 This add-on is based on [Visual Feedback for Reviews](https://ankiweb.net/shared/info/1749604199) which is Copyright © 2017 Ja-Dark and Copyright © 2017-2020 Aristotelis P. (Glutanimate).
 
 Hitmarkers is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license, extended by a number of additional terms. For more information please see the [LICENSE](https://github.com/glutanimate/hitmarkers/blob/master/LICENSE) file that accompanied this program.
-
-Please note that this program uses the [Libaddon](https://github.com/glutanimate/anki-libaddon/) library which comes with [its own additional terms extending the GNU AGPLv3 license](https://github.com/glutanimate/anki-libaddon/blob/master/LICENSE). You may only copy, distribute, or modify the present compilation of this program with Libaddon under the combined licensing terms specified by both licenses.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
@@ -98,6 +92,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 ----
 
 <b>
-<div align="center">The continued development of this add-on is made possible <br>thanks to my <a href="https://www.patreon.com/glutanimate">Patreon</a> and <a href="https://ko-fi.com/X8X0L4YV">Ko-Fi</a> supporters.
+<div align="center">The continued development of this add-on is made possible <br>thanks to my <a href="https://www.patreon.com/glutanimate">Patreon</a> supporters.
 <br>You guys rock ❤️ !</div>
 </b>
