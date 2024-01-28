@@ -38,28 +38,18 @@ from typing import Optional
 
 from aqt import mw
 from aqt.qt import QLabel, QPixmap, QPoint, Qt, QTimer
-
-try:
-    from anki.sound import SoundOrVideoTag
-    from aqt.sound import av_player
-
-    legacy_play = None
-except (ImportError, ModuleNotFoundError):
-    from anki.sound import play as legacy_play
-
-    av_player = None
-
+from aqt.sound import av_player
 
 _lab: Optional[QLabel] = None
 _timer: Optional[QTimer] = None
 
 
 def closeConfirm():
-    global _lab, _timer
+    global _lab, _timer  # noqa: PLW0603
     if _lab:
         try:
             _lab.deleteLater()
-        except:  # noqa: E722
+        except Exception:
             pass
         _lab = None
     if _timer:
@@ -68,7 +58,7 @@ def closeConfirm():
 
 
 def confirm(image_path: str, audio_path: str, period: int):
-    global _timer, _lab
+    global _timer, _lab  # noqa: PLW0603
     if mw is None:
         return
     parent = mw
@@ -97,11 +87,4 @@ def confirm(image_path: str, audio_path: str, period: int):
         _lab = lab
 
     if Path(audio_path).is_file():
-        if av_player:
-            # Delay audio playback to prevent reviewer from stopping playback
-            # on showQuestion
-            mw.progress.timer(
-                1, lambda: av_player.play_file(filename=audio_path), False
-            )
-        else:
-            legacy_play(audio_path)
+        mw.progress.timer(1, lambda: av_player.play_file(filename=audio_path), False)
