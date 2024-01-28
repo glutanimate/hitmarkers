@@ -29,10 +29,10 @@
 #
 # Any modifications to this file must keep this entire header intact.
 
-from typing import Callable, NamedTuple, Optional
+from typing import NamedTuple, Optional
 
 from anki.cards import Card
-from anki.hooks import wrap
+from aqt.gui_hooks import reviewer_did_answer_card
 from aqt.reviewer import Reviewer
 from aqt.utils import showWarning
 
@@ -88,21 +88,5 @@ def on_answer_card(reviewer: Reviewer, card: Card, ease: int):
         confirm(image_paths.passed, sound_paths.passed, duration)
 
 
-def on_answer_card_wrapper(reviewer: Reviewer, ease: int, _old: Callable):
-    """Legacy wrapper for Anki <2.1.20"""
-    if reviewer.mw.state != "review" or reviewer.state != "answer" or not reviewer.card:
-        return
-    ret = _old(reviewer, ease)
-    on_answer_card(reviewer, reviewer.card, ease)
-    return ret
-
-
-def initialize_reviewer():
-    try:
-        from aqt.gui_hooks import reviewer_did_answer_card
-
-        reviewer_did_answer_card.append(on_answer_card)
-    except (ImportError, ModuleNotFoundError):  # Anki < 2.1.20
-        Reviewer._answerCard = wrap(
-            Reviewer._answerCard, on_answer_card_wrapper, "around"
-        )
+def hook_into_reviewer():
+    reviewer_did_answer_card.append(on_answer_card)

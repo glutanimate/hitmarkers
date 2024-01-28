@@ -29,6 +29,6 @@
 #
 # Any modifications to this file must keep this entire header intact.
 
-from .reviewer import initialize_reviewer
+from .reviewer import hook_into_reviewer
 
-initialize_reviewer()
+hook_into_reviewer()
