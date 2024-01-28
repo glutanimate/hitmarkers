@@ -37,7 +37,7 @@ from __future__ import (absolute_import, division,
                         print_function, unicode_literals)
 
 
-def setAddonProperties(addon):
+def set_addon_properties(addon):
     """Update ADDON class properties from another ADDON class
     
     Arguments:

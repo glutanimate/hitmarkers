@@ -2,7 +2,8 @@
 
 # Libaddon for Anki
 #
-# Copyright (C) 2018-2019  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2018-2020  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2020 Ankitects Pty Ltd and contributors
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -30,41 +31,18 @@
 # Any modifications to this file must keep this entire header intact.
 
 """
-Custom color-chooser
+Helpers to mediate signal/slot handlign in PyQt
 """
 
-from __future__ import (absolute_import, division,
-                        print_function, unicode_literals)
+from typing import Callable, Union
 
-from aqt.qt import QPushButton, QColorDialog, QPixmap, QColor, QIcon, QSize
+from aqt.qt import pyqtSignal, pyqtBoundSignal
 
-class QColorButton(QPushButton):
-    def __init__(self, parent=None, color="#000000"):
-        super(QColorButton, self).__init__(parent=parent)
-        self._updateButtonColor(color)
-        self.clicked.connect(self._chooseColor)
 
-    def _chooseColor(self):
-        qcolour = QColor(self.color)
-        dialog = QColorDialog(qcolour, parent=self)
-        color = dialog.getColor()
-        if not color.isValid():
-            return False
-        color = color.name()
-        self._updateButtonColor(color)
-
-    def _updateButtonColor(self, color):
-        """Generate color preview pixmap and place it on button"""
-        pixmap = QPixmap(128, 18)
-        qcolour = QColor(0, 0, 0)
-        qcolour.setNamedColor(color)
-        pixmap.fill(qcolour)
-        self.setIcon(QIcon(pixmap))
-        self.setIconSize(QSize(128, 18))
-        self.color = color
+def qconnect(signal: Union[Callable, pyqtSignal, pyqtBoundSignal], func: Callable) -> None:
+    """
+    Helper to work around type checking not working with signal.connect(func).
     
-    def color(self):
-        return self.color
-    
-    def setColor(self, color):
-        self._updateButtonColor(color)
+    Based on aqt.qt, Copyright (C) 2020 Ankitects Pty Ltd and contributors
+    """
+    signal.connect(func)  # type: ignore[attr-defined, union-attr]
