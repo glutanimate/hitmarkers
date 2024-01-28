@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Libaddon for Anki
+# Due Cards Badge Add-on for Anki
 #
-# Copyright (C) 2018-2022  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2023-2024  Aristotelis P. <https://glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -29,18 +29,8 @@
 #
 # Any modifications to this file must keep this entire header intact.
 
-from aqt.qt import QDir, QIcon, QPixmap
+import os
 
 
-class AssetProvider:
-    def __init__(self, prefix: str, asset_root_path: str):
-        self._prefix = prefix
-        QDir.addSearchPath(prefix, asset_root_path)
-
-    def get_icon(self, relative_path: str):
-        icon = QIcon()
-        icon.addPixmap(self.get_pixmap(relative_path))
-        return icon
-
-    def get_pixmap(self, relative_path: str):
-        return QPixmap(f"{self._prefix}:{relative_path}")
+def is_test_environment() -> bool:
+    return bool(os.environ.get("ADDON_TEST_ENV"))

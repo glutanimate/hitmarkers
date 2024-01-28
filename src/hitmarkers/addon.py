@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Libaddon for Anki
+# Hitmarkers Add-on for Anki
 #
-# Copyright (C) 2018-2019  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2017-2020  Aristotelis P. <https://glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -29,28 +29,6 @@
 #
 # Any modifications to this file must keep this entire header intact.
 
-"""
-Helpers for interacting with Anki's editor instances
-"""
+from .reviewer import initialize_reviewer
 
-# Handling async JS execution when saving editor content
-
-def editorSaveThen(callback):
-    def onSaved(editor, *args, **kwargs):
-        # uses evalWithCallback internally:
-        editor.saveNow(lambda: callback(editor, *args, **kwargs))
-    return onSaved
-
-
-def widgetEditorSaveThen(callback):
-    def onSaved(widget, *args, **kwargs):
-        """[summary]
-        
-        Arguments:
-            callback {[type]} -- [description]
-            widget {Qt widget or widget} -- Qt object the editor is a member of
-            (e.g. Browser, AddCards, EditCurrent)
-        """
-        # uses evalWithCallback internally:
-        widget.editor.saveNow(lambda: callback(widget, *args, **kwargs))
-    return onSaved
+initialize_reviewer()

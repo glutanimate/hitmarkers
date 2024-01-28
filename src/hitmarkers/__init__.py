@@ -30,42 +30,13 @@
 # Any modifications to this file must keep this entire header intact.
 
 """
-Initializes add-on components.
+Module-level entry point for the add-on
 """
 
+from . import _version
+from .environment import is_test_environment
 
-from ._version import __version__  # noqa: F401
+__version__ = _version.__version__
 
-from .libaddon import maybeVendorTyping
-
-maybeVendorTyping()
-
-
-def initialize_addon():
-    """Initializes add-on after performing a few checks
-    
-    Allows more fine-grained control over add-on execution, which can
-    be helpful when implementing workarounds for Anki bugs (e.g. the module
-    import bug present in all Anki 2.1 versions up to 2.1.14)
-    """
-
-    from .libaddon import checkFor2114ImportError
-    from .consts import ADDON
-
-    if not checkFor2114ImportError(ADDON.NAME):
-        return False
-
-    from .consts import ADDON
-    from .libaddon.consts import setAddonProperties
-
-    setAddonProperties(ADDON)
-
-    # from .libaddon.debug import maybeStartDebugging
-
-    # maybeStartDebugging()
-
-    from .reviewer import initialize_reviewer
-
-    initialize_reviewer()
-
-initialize_addon()
+if not is_test_environment():
+    from .addon import *

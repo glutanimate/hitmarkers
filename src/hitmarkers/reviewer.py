@@ -29,18 +29,15 @@
 #
 # Any modifications to this file must keep this entire header intact.
 
-from pathlib import Path
+from typing import Callable, NamedTuple, Optional
 
-from anki.hooks import wrap
 from anki.cards import Card
+from anki.hooks import wrap
 from aqt.reviewer import Reviewer
 from aqt.utils import showWarning
 
-from .libaddon.platform import pathUserFiles, PATH_THIS_ADDON
+from .consts import ADDON_NAME, PACKAGE_PATH, USER_FILES_PATH
 from .feedback import confirm
-from .consts import ADDON
-
-from typing import Optional, NamedTuple, Callable
 
 # TODO?: configurable
 _DEFAULT_MEDIA_SET = "hitmarkers"
@@ -53,8 +50,8 @@ class MediaPaths(NamedTuple):
 
 
 def _get_media_paths(set_name: str, media_type: str) -> Optional[MediaPaths]:
-    default_path = Path(PATH_THIS_ADDON) / media_type
-    user_path = Path(pathUserFiles()) / media_type
+    default_path = PACKAGE_PATH / media_type
+    user_path = USER_FILES_PATH / media_type
 
     extension = "png" if media_type == "images" else "wav"
 
@@ -78,7 +75,7 @@ def on_answer_card(reviewer: Reviewer, card: Card, ease: int):
 
     if image_paths is None or sound_paths is None:
         showWarning(
-            f"{ADDON.NAME} is not configured correctly: Could not find images or audio "
+            f"{ADDON_NAME} is not configured correctly: Could not find images or audio "
             f"for '{image_set}'' media set. Please reset the configuration to the "
             "defaults and try again. If that does not work, "
             "please redownload the add-on."
