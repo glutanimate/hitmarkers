@@ -65,7 +65,6 @@ def confirm(image_path: str, audio_path: str, period: int):
     closeConfirm()
 
     if Path(image_path).is_file():
-
         lab = QLabel(parent=parent)
         img = QPixmap(image_path).scaledToWidth(
             64, mode=Qt.TransformationMode.SmoothTransformation
@@ -83,8 +82,10 @@ def confirm(image_path: str, audio_path: str, period: int):
         lab.move(center - qp)
 
         lab.show()
-        _timer = mw.progress.timer(period, closeConfirm, False)
+        _timer = mw.progress.timer(period, closeConfirm, False, parent=parent)
         _lab = lab
 
     if Path(audio_path).is_file():
-        mw.progress.timer(1, lambda: av_player.play_file(filename=audio_path), False)
+        mw.progress.single_shot(
+            1, lambda: av_player.play_file(filename=audio_path), False
+        )

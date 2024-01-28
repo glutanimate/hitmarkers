@@ -34,7 +34,7 @@ from typing import NamedTuple, Optional
 from anki.cards import Card
 from aqt.gui_hooks import reviewer_did_answer_card
 from aqt.reviewer import Reviewer
-from aqt.utils import showWarning
+from aqt.utils import show_warning
 
 from .consts import ADDON_NAME, PACKAGE_PATH, USER_FILES_PATH
 from .feedback import confirm
@@ -74,7 +74,7 @@ def on_answer_card(reviewer: Reviewer, card: Card, ease: int):
     sound_paths = _get_media_paths(audio_set, "sounds")
 
     if image_paths is None or sound_paths is None:
-        showWarning(
+        show_warning(
             f"{ADDON_NAME} is not configured correctly: Could not find images or audio "
             f"for '{image_set}'' media set. Please reset the configuration to the "
             "defaults and try again. If that does not work, "
