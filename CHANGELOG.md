@@ -12,6 +12,10 @@ If you enjoy Hitmarkers, please consider supporting my work on Patreon:
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-01-29
+
+### [Download](https://github.com/glutanimate/hitmarkers/releases/tag/v0.2.0)
+
 ### Added
 
 - Added support for Anki 23.x (last tested on 23.12.1)
@@ -45,7 +49,8 @@ If you enjoy Hitmarkers, please consider supporting my work on Patreon:
 
 - Initial release of Hitmarkers
 
-[Unreleased]: https://github.com/glutanimate/hitmarkers/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/glutanimate/hitmarkers/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/glutanimate/hitmarkers/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/glutanimate/hitmarkers/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/glutanimate/hitmarkers/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/glutanimate/hitmarkers/compare/v0.0.0...v0.1.0
