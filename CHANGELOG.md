@@ -2,15 +2,24 @@
 
 All notable changes to [Hitmarkers](https://ankiweb.net/shared/info/) will be documented here. You can click on each release number to be directed to a detailed log of all code commits for that particular release. The download links will direct you to the GitHub release page, allowing you to manually install a release if you want.
 
-If you enjoy Hitmarkers, please consider supporting my work on Patreon, or by buying me a cup of coffee :coffee::
+If you enjoy Hitmarkers, please consider supporting my work on Patreon:
 
 <p align="center">
-<a href="https://www.patreon.com/glutanimate" rel="nofollow" title="Support me on Patreon 😄"><img src="https://glutanimate.com/logos/patreon_button.svg"></a>      <a href="https://ko-fi.com/X8X0L4YV" rel="nofollow" title="Buy me a coffee 😊"><img src="https://glutanimate.com/logos/kofi_button.svg"></a>
+<a href="https://www.patreon.com/glutanimate" rel="nofollow" title="Support me on Patreon 😄"><img src="https://glutanimate.com/logos/patreon_button.svg"></a>
 </p>
 
 :heart: My heartfelt thanks goes out to everyone who has supported this add-on through their tips, contributions, or any other means (you know who you are!). All of this would not have been possible without you. Thank you for being awesome!
 
 ## [Unreleased]
+
+### Added
+
+- Added support for Anki 23.x (last tested on 23.12.1)
+
+### Changed
+
+- Dropped support for legacy Anki versions. The minimum supported version for this update is 2.1.64.
+- Refactored add-on to make use of some new Anki add-on APIs, making it less likely to break on future Anki updates
 
 ## [0.1.2] - 2020-03-11
 
